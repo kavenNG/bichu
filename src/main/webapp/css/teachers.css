@@ -1,0 +1,196 @@
+.bright_spot {
+  background: url("../images/ld_04.png") no-repeat 0 0;
+  background-size: cover;
+}
+.bright_spot h2 {
+  font-size: 0.63333333rem;
+  color: #fff;
+  text-align: center;
+  line-height: 1.43333333rem;
+  padding-top: 0.3rem;
+}
+.bright_spot .stic {
+  background: none;
+}
+.bright_spot .stic .stic_con {
+  width: 100%;
+  justify-content: space-around;
+  padding-top: 0;
+}
+.bright_spot .stic .stic_con div {
+  background-color: rgba(255, 255, 255, 0.36);
+  padding-bottom: 0.43333333rem;
+  width: 5.16666667rem;
+  height: auto;
+  margin-top: 0;
+  margin-bottom: 0.33333333rem;
+}
+.bright_spot .stic .stic_con div h3 {
+  padding-top: 0.33333333rem;
+}
+.bright_spot .stic .stic_con div p {
+  font-size: 0.26666667rem;
+  color: #ffffff;
+  line-height: 1.2;
+}
+.Creative_curr {
+  overflow: hidden;
+}
+.Creative_curr h2 {
+  font-size: 0.63333333rem;
+  color: #000;
+  text-align: center;
+  font-weight: bold;
+  line-height: 1.76666667rem;
+  padding-top: 0.33333333rem;
+}
+.Creative_curr .curr_list {
+  width: 10.83333333rem;
+  margin: 0 auto;
+}
+.Creative_curr .curr_list .list {
+  display: flex;
+  padding-top: 0.16666667rem;
+  box-shadow: 0 0 30px 3px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+  padding-bottom: 0.16666667rem;
+  margin-bottom: 0.5rem;
+  height: 2.1rem;
+}
+.Creative_curr .curr_list .list .list_img {
+  width: 1.73333333rem;
+  height: 1.73333333rem;
+  padding-left: 0.26666667rem;
+}
+.Creative_curr .curr_list .list .list_img img {
+  width: 100%;
+  border-radius: 50%;
+}
+.Creative_curr .curr_list .list .list_con {
+  width: 8.58333333rem;
+  padding-left: 0.23333333rem;
+}
+.Creative_curr .curr_list .list .list_con h3 {
+  font-size: 0.46666667rem;
+  padding-top: 0.08333333rem;
+  padding-bottom: 0.23333333rem;
+}
+.Creative_curr .curr_list .list .list_con p {
+  font-size: 0.3rem;
+  color: #6e6d6d;
+  line-height: 0.53333333rem;
+}
+.tea_team {
+  height: 11.2rem;
+  background: #1e1e1e url("../images/V.png") no-repeat 0 0;
+  background-size: cover;
+}
+.tea_team h2 {
+  font-size: 0.63333333rem;
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  line-height: 1.76666667rem;
+  padding-top: 0.33333333rem;
+  padding-bottom: 0.66666667rem;
+}
+.tea_team .team_mm {
+  /* display: flex;*/
+}
+.tea_team .team_mm img {
+  width: 100%;
+}
+.tea_team .team_mm .team_mm_img {
+  width: 4.66666667rem;
+  margin-left: 0.4rem;
+}
+.tea_team .team_mm .team_mm_img img {
+  width: 100%;
+}
+.tea_team .team_mm .team_mm_con {
+  width: 7rem;
+  padding-left: 0.46666667rem;
+}
+.tea_team .team_mm .team_mm_con h3 {
+  font-size: 0.5rem;
+  color: #fff;
+  margin-bottom: 0.33333333rem;
+}
+.tea_team .team_mm .team_mm_con h4 {
+  font-size: 0.5rem;
+  color: #fff;
+  margin-bottom: 0.56666667rem;
+}
+.tea_team .team_mm .team_mm_con p {
+  font-size: 0.3rem;
+  color: #fff;
+  line-height: 0.56666667rem;
+}
+.ds_mes {
+  width: 10.83333333rem;
+  margin: 0 auto;
+}
+.ds_mes ul {
+  width: 6.6rem;
+  margin: 0 auto;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  margin-top: 0.53333333rem;
+  margin-bottom: 1.86666667rem;
+}
+.ds_mes ul li {
+  width: 50%;
+  background: #cbcaca;
+  font-size: 0.5rem;
+  text-align: center;
+  line-height: 1.06666667rem;
+  color: #fff;
+  font-weight: bold;
+}
+.ds_mes ul .active {
+  background: #e13131;
+}
+.ds_mes .ds_con .ds_list {
+  /*height:302/2/@w;*/
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 0 30px 3px rgba(0, 0, 0, 0.25);
+  margin-bottom: 2rem;
+}
+.ds_mes .ds_con .ds_list .ds_au {
+  position: absolute;
+  left: 22px;
+  top: -39px;
+  width: 2.33333333rem;
+  height: 2.33333333rem;
+}
+.ds_mes .ds_con .ds_list .ds_au img {
+  width: 100%;
+}
+.ds_mes .ds_con .ds_list .list_t {
+  /* height:226/2/@w;*/
+  background-color: #e13131;
+  border-radius: 10px 10px 0 0;
+  padding-bottom: 0.53333333rem;
+}
+.ds_mes .ds_con .ds_list .list_t h3 {
+  font-size: 0.5rem;
+  color: #fff;
+  text-align: center;
+  line-height: 1.06666667rem;
+  padding-top: 0.26666667rem;
+}
+.ds_mes .ds_con .ds_list .list_t p {
+  font-size: 0.3rem;
+  color: #fff;
+  line-height: 0.53333333rem;
+  padding: 0 0.4rem;
+}
+.ds_mes .ds_con .ds_list .list_b {
+  line-height: 1.26666667rem;
+  font-size: 0.5rem;
+  text-align: center;
+  border-radius: 0 0 10px 10px;
+  background-color: #fff;
+}

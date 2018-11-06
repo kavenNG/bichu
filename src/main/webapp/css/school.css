@@ -1,0 +1,148 @@
+html,body{
+    width: 100%;
+    height: 100%;
+
+}
+.clearfix:after{
+    clear: both;
+    display: block;
+    height: 0;
+    content: "";
+}
+.w{
+    height: 100%;
+    width: 6.8rem;
+    margin: 0 auto;
+    position: relative;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+
+.banner {
+    height: 3.65rem;
+    background: url("../images/射鸡师 (97) 拷贝.png") no-repeat 100% 100%;
+    background-size: cover;
+    color: #d4eff7;
+}
+.content{
+    padding-top: .52rem;
+
+}
+.flag{
+    margin-bottom: .5rem;
+}
+
+.flag img{
+    width: 100%;
+}
+.card{
+    box-shadow: 0 .2rem .2rem #ccc;
+    border-radius: .17rem;
+    overflow: hidden;
+    margin-bottom: .7rem;
+}
+.pointer{
+    width: 0.16rem;
+    height: 0.18rem;
+    margin-right: 0.06rem;
+    display: inline-block;
+    background: url("../images/定位logo.png");
+    background-size: contain;
+}
+.top{
+    height: 4.05rem;
+    width: 100%;
+    position: relative;
+    background: url("../images/院校图.png") no-repeat top left;
+    background-size: contain;
+    color: #fff;
+
+}
+.top_info{
+    padding-left: .24rem;
+    box-sizing: border-box;
+    width: 100%;
+    padding-top: 2.5rem;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.mask{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.36;
+}
+.card_title{
+    font-size: .46rem;
+}
+.card_title_en{
+    font-size: .23rem;
+    line-height: .36rem;
+
+}
+.card_type{
+    font-size: .22rem;
+    margin-right: .1rem;
+}
+.card_position{
+    font-size: .2rem;
+}
+
+.card_otherinfo{
+    line-height: 0rem;
+}
+.card_logo{
+    position: absolute;
+    right: .2rem;
+    bottom:-.95rem;
+    width: 1.9rem;
+    height: 1.9rem;
+}
+.card_logo img{
+    width: 100%;
+}
+
+.bottom{
+    padding: .2rem .46rem;
+}
+.content_box{
+    font-size: .28rem;
+    line-height: .49rem;
+
+}
+.left{
+    float: left;
+    margin-right: 0.14rem;
+}
+.right{
+    float: left;
+}
+.btnbox{
+    padding-top: .36rem;
+    margin-bottom: .2rem;
+}
+
+.btn{
+    font-size: .3rem;
+    color: #fff;
+    background: #f84646;
+    box-sizing: border-box;
+    border-radius: .17rem;
+    width: 2.63rem;
+    height: .74rem;
+    float: left;
+    line-height: .74rem;
+    text-align: center;
+}
+.btn:nth-child(1){
+    margin-right: .52rem;
+}

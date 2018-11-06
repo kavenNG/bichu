@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.bichu.dao.TeacherCustomMapper" >
+  <resultMap id="BaseResultMap" type="com.bichu.pojo.Teacher" >
+
+
+
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, name, collegeId, avatar, details, age, majorId, majorName
+  </sql>
+  <select id="selectTeacherCustom" resultType="com.bichu.pojo.TeacherCustom">
+    select T.*, Major.name as majorName from
+	(select Teacher.*, College.name as collegeName from Teacher, College where Teacher.collegeId = College.id) as T, Major
+			where T.majorId = Major.id
+  </select>
+
+</mapper>

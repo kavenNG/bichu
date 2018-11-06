@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.bichu.dao.MajorMapper" >
+    <resultMap id="BaseResultMap" type="com.bichu.pojo.Major" >
+        <constructor >
+            <idArg column="id" jdbcType="INTEGER" javaType="java.lang.Integer" />
+            <arg column="majorName" jdbcType="VARCHAR" javaType="java.lang.String" />
+            <arg column="categoryId" jdbcType="INTEGER" javaType="java.lang.Integer" />
+            <arg column="englishName" jdbcType="VARCHAR" javaType="java.lang.String" />
+            <arg column="img" jdbcType="VARCHAR" javaType="java.lang.String" />
+            <arg column="icon" jdbcType="VARCHAR" javaType="java.lang.String" />
+            <arg column="introduce" jdbcType="VARCHAR" javaType="java.lang.String" />
+            <arg column="careerProspect" jdbcType="VARCHAR" javaType="java.lang.String"/>
+            <arg column="direction" jdbcType="VARCHAR" javaType="java.lang.String"/>
+        </constructor>
+    </resultMap>
+  <resultMap id="MajorCategoryMapper" type="com.bichu.pojo.Major" >
+      <id property="id" column="id" />
+      <result property="majorName" column="majorName" />
+      <result property="categoryId" column="categoryId" />
+      <result property="englishName" column="englishName" />
+      <result property="img" column="img" />
+      <result property="icon" column="icon" />
+      <result property="introduce" column="introduce" />
+      <result property="careerProspect" column="careerProspect" />
+      <result property="direction" column="direction" />
+      <!-- association字面意思关联，这里只专门做一对一关联； property表示是com.mybatis.bean.StudentTemp中的属性名称；
+          javaType表示该属性是什么类型对象 -->
+      <association property="category" javaType="com.bichu.pojo.Category">
+          <id property="id" column="categoryId" />
+          <result property="categoryName" column="categoryName" />
+          <result property="englishName" column="categoryEnglishName"/>
+          <result property="icon" column="categoryIcon"/>
+      </association>
+
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, majorName, categoryId, englishName, img, icon, introduce, careerProspect, direction
+  </sql>
+  <select id="getMajors" resultMap="MajorCategoryMapper">
+      select Major.*, Category.categoryName, Category.englishName as categoryEnglishName, Category.icon as categoryIcon from Major, Category where
+Major.categoryId = Category.id
+  </select>
+
+    <select id="findMajorById" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select <include refid="Base_Column_List"/> from Major
+        where id = #{id}
+    </select>
+
+</mapper>

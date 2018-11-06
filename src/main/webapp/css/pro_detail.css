@@ -1,0 +1,138 @@
+.pro_in {
+  width: 10.83333333rem;
+  margin: 0 auto;
+}
+.pro_tit {
+  height: 3.08333333rem;
+  background: #222;
+}
+.pro_tit h1 {
+  font-size: 0.68333333rem;
+  color: #fff;
+  padding-top: 0.86666667rem;
+}
+.pro_tit h3 {
+  font-size: 0.5rem;
+  color: #fff;
+  text-transform: capitalize;
+  padding-top: 0.23333333rem;
+}
+.pro_detail h2 {
+  color: #ff5b61;
+  font-size: 0.66666667rem;
+  letter-spacing: 3px;
+  padding-top: 0.66666667rem;
+  padding-bottom: 0.1rem;
+}
+.pro_detail h3 {
+  color: #9f9f9f;
+  font-size: 0.3rem;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+.pro_detail p {
+  color: #000000;
+  font-size: 0.33333333rem;
+  line-height: 0.5rem;
+  padding-top: 0.33333333rem;
+}
+.yxpm {
+  font-size: 0.63333333rem;
+  color: #000;
+  text-align: center;
+  font-weight: bold;
+  line-height: 1.76666667rem;
+}
+/*选项卡*/
+#myTab,
+#divstyletab {
+  display: flex;
+  background-color: #cbcaca;
+  border-radius: 4px;
+  overflow: hidden;
+  height: 1.03333333rem;
+}
+#myTab li,
+#divstyletab li {
+  width: 50%;
+  line-height: 1.03333333rem;
+}
+#myTab li a,
+#divstyletab li a {
+  color: #fff;
+  font-size: 0.5rem;
+  border-radius: 0;
+  padding: 0;
+  text-align: center;
+}
+#myTab .active a,
+#divstyletab .active a {
+  background: #f84646;
+}
+.zy_list {
+  width: 9.33333333rem;
+  margin: 0 auto;
+  padding-top: 0.96666667rem;
+}
+.zy_list .left {
+  width: 1.4rem;
+  height: 1.4rem;
+  background-color: #000;
+  border-radius: 50%;
+  float: left;
+}
+.zy_list .right h2 {
+  font-size: 0.46666667rem;
+  font-weight: bold;
+  padding-left: 2.11666667rem;
+  padding-top: 0.2rem;
+}
+.zy_list .right p {
+  font-size: 0.36666667rem;
+  color: #a8a8a8;
+  text-transform: capitalize;
+  padding-left: 2.61666667rem;
+  padding-top: 0.16666667rem;
+}
+/*vip*/
+.vip {
+  background-color: #ff5b61;
+  text-align: center;
+}
+.vip h1 {
+  font-size: 0.83333333rem;
+}
+.person p {
+  font-size: 0.3rem;
+  color: #5b5a5a;
+  text-align: center;
+  line-height: 0.83333333rem;
+  font-weight: bold;
+}
+.cip_img img {
+  width: 100%;
+}
+.cip_img p {
+  font-size: 0.3rem;
+  line-height: 0.5rem;
+  padding-bottom: 0.63333333rem;
+}
+.vip_con,
+.vip_jc,
+.vip_k {
+  padding-top: 0.5rem;
+}
+.vip_con img,
+.vip_jc img,
+.vip_k img {
+  width: 100%;
+  vertical-align: top;
+}
+.vip_jc,
+.vip_k {
+  padding-top: 0;
+}
+.vip_k {
+  position: relative;
+  top: -3px;
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.bichu.dao.CaseMapper" >
+  <resultMap id="BaseResultMap" type="com.bichu.pojo.Case" >
+    <constructor >
+      <idArg column="id" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="majorId" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="studentId" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="collegeId" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="comment" jdbcType="VARCHAR" javaType="java.lang.String" />
+      <arg column="isSuccess" jdbcType="INTEGER" javaType="java.lang.Integer" />
+      <arg column="img" jdbcType="VARCHAR" javaType="java.lang.String" />
+    </constructor>
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, majorId, studentId, collegeId, comment, isSuccess, img
+  </sql>
+  <select id="getSuccessCase" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List"/>
+    from Cases where isSuccess = 1
+  </select>
+
+  <select id="getBannerImg" resultType="java.lang.String">
+    select bannerImg FROM Banner
+  </select>
+
+</mapper>

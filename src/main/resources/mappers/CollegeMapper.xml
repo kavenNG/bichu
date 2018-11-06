@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.bichu.dao.CollegeMapper" >
+    <resultMap id="BaseResultMap" type="com.bichu.pojo.College" >
+        <constructor >
+            <idArg column="id" jdbcType="INTEGER" javaType="java.lang.Integer" />
+            <arg column="collegeName" jdbcType="VARCHAR" javaType="java.lang.String" />
+            <arg column="englishName" jdbcType="VARCHAR" javaType="java.lang.String" />
+            <arg column="img" jdbcType="VARCHAR" javaType="java.lang.String" />
+            <arg column="icon" jdbcType="VARCHAR" javaType="java.lang.String" />
+            <arg column="difficulty" jdbcType="VARCHAR" javaType="java.lang.String" />
+            <arg column="details" jdbcType="VARCHAR" javaType="java.lang.String" />
+            <arg column="property" jdbcType="VARCHAR" javaType="java.lang.String"/>
+            <arg column="country" jdbcType="VARCHAR" javaType="java.lang.String"/>
+        </constructor>
+    </resultMap>
+
+  <sql id="Base_Column_List" >
+    id, collegeName, englishName, img, icon, difficulty, details, property, country
+  </sql>
+<select id="getCollegeList" resultMap="BaseResultMap">
+    select <include refid="Base_Column_List"/>
+   from College
+</select>
+    <select id="getCollegeById" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+        select <include refid="Base_Column_List"/>
+        from College where id = #{id}
+    </select>
+
+    <select id="findCollegeOrderByScore" parameterType="map" resultMap="BaseResultMap">
+        select College.* from
+        MajorAndCollege, College where MajorAndCollege.collegeId = College.id
+        and
+        <choose>
+            <when test='country == "美国"'>
+                College.country = #{country}
+            </when>
+            <when test='country == "英国"'>
+                College.country = #{country}
+            </when>
+            <otherwise>
+                College.country not in ('美国', '英国')
+            </otherwise>
+        </choose>
+        and MajorAndCollege.majorId = #{majorId}
+        <if test='order == "underScore"'>
+            order by MajorAndCollege.underScore DESC
+        </if>
+        <if test='order == "postScore"'>
+            order by MajorAndCollege.postScore DESC
+        </if>
+    </select>
+</mapper>

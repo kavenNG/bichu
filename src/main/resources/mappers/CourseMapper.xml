@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.bichu.dao.CourseMapper" >
+    <resultMap id="BaseResultMap" type="com.bichu.pojo.Course" >
+        <constructor >
+            <idArg column="id" jdbcType="INTEGER" javaType="java.lang.Integer" />
+            <arg column="courseCategoryId" jdbcType="INTEGER" javaType="java.lang.Integer" />
+            <arg column="details" jdbcType="VARCHAR" javaType="java.lang.String" />
+            <arg column="content" jdbcType="VARCHAR" javaType="java.lang.String" />
+            <arg column="resultShow" jdbcType="VARCHAR" javaType="java.lang.String" />
+            <arg column="faceTo" jdbcType="VARCHAR" javaType="java.lang.String" />
+            <arg column="signUp" jdbcType="VARCHAR" javaType="java.lang.String" />
+            <arg column="needKnow" jdbcType="VARCHAR" javaType="java.lang.String"/>
+            <arg column="startTime" jdbcType="VARCHAR" javaType="java.lang.String"/>
+            <arg column="courseName" jdbcType="VARCHAR" javaType="java.lang.String"/>
+            <arg column="courseImg" jdbcType="VARCHAR" javaType="java.lang.String"/>
+            <arg column="courseEnglishName" jdbcType="VARCHAR" javaType="java.lang.String"/>
+        </constructor>
+    </resultMap>
+  <resultMap id="CourseCategoryMap" type="com.bichu.pojo.Course" >
+      <id property="id" column="id" />
+      <result property="courseCategoryId" column="courseCategoryId" />
+      <result property="details" column="details" />
+      <result property="content" column="content" />
+      <result property="resultShow" column="resultShow" />
+      <result property="faceTo" column="faceTo" />
+      <result property="signUp" column="signUp" />
+      <result property="needKnow" column="needKnow" />
+      <result property="startTime" column="startTime" />
+      <result property="courseName" column="courseName" />
+      <result property="courseImg" column="courseImg" />
+      <result property="courseEnglishName" column="courseEnglishName" />
+      <!-- association字面意思关联，这里只专门做一对一关联； property表示是com.mybatis.bean.StudentTemp中的属性名称；
+          javaType表示该属性是什么类型对象 -->
+      <association property="category" javaType="com.bichu.pojo.Category">
+          <id property="id" column="courseCategoryId" />
+          <result property="categoryName" column="categoryName" />
+          <result property="englishName" column="categoryEnglishName"/>
+          <result property="icon" column="icon"/>
+      </association>
+
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, courseCategoryId, details, content, resultShow, faceTo, signUp, needKnow, startTime, courseName, courseImg, courseEnglishName
+  </sql>
+  <select id="getCourses" resultMap="CourseCategoryMap">
+      select WorkShop.*, Category.categoryName, Category.englishName as categoryEnglishName, Category.icon from
+      WorkShop, Category where WorkShop.courseCategoryId = Category.id
+  </select>
+
+    <select id="getCourseById" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select <include refid="Base_Column_List"/>
+        from WorkShop where id = #{id}
+    </select>
+</mapper>

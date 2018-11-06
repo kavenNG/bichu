@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.bichu.dao.TeacherMapper" >
+    <resultMap id="BaseResultMap" type="com.bichu.pojo.Teacher" >
+        <constructor >
+            <idArg column="id" jdbcType="INTEGER" javaType="java.lang.Integer" />
+            <arg column="teacherName" jdbcType="VARCHAR" javaType="java.lang.String" />
+            <arg column="majorId" jdbcType="INTEGER" javaType="java.lang.Integer" />
+            <arg column="collegeId" jdbcType="INTEGER" javaType="java.lang.Integer" />
+            <arg column="avatar" jdbcType="VARCHAR" javaType="java.lang.String" />
+            <arg column="details" jdbcType="VARCHAR" javaType="java.lang.String" />
+            <arg column="age" jdbcType="INTEGER" javaType="java.lang.Integer" />
+            <arg column="img" jdbcType="VARCHAR" javaType="java.lang.String"/>
+        </constructor>
+    </resultMap>
+  <resultMap id="TeacherMap" type="com.bichu.pojo.Teacher" >
+      <id property="id" column="id" />
+      <result property="majorId" column="majorId" />
+      <result property="teacherName" column="teacherName" />
+      <result property="collegeId" column="collegeId" />
+      <result property="avatar" column="avatar" />
+      <result property="age" column="age" />
+      <result property="details" column="details" />
+      <result property="img" column="img" />
+      <!-- association字面意思关联，这里只专门做一对一关联； property表示是com.mybatis.bean.StudentTemp中的属性名称；
+          javaType表示该属性是什么类型对象 -->
+      <association property="major" javaType="com.bichu.pojo.Major">
+          <id property="id" column="majorId" />
+          <result property="majorName" column="majorName" />
+      </association>
+      <association property="college" javaType="com.bichu.pojo.College">
+          <id property="id" column="collegeId" />
+          <result property="collegeName" column="collegeName" />
+      </association>
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, teacherName, majorId, collegeId, avatar, details, age, img
+  </sql>
+  <select id="selectAllTeachers" resultMap="TeacherMap">
+    select
+    Teacher.*, Major.majorName, College.collegeName
+    from Teacher, Major, College where Teacher.majorId = Major.id and Teacher.collegeId = College.id
+  </select>
+
+    <select id="selectTeacherByPrimaryId" parameterType="int" resultType="com.bichu.pojo.Teacher">
+        select <include refid="Base_Column_List"/>
+        from Teacher
+        where id = #{id}
+    </select>
+</mapper>

@@ -1,0 +1,98 @@
+html,body{
+    width: 100%;
+    height: 100%;
+
+}
+.clearfix:after{
+    clear: both;
+    display: block;
+    height: 0;
+    content: "";
+}
+.w{
+    height: 100%;
+    width: 6.8rem;
+    margin: 0 auto;
+    position: relative;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+
+.banner {
+    height: 3.38rem;
+    background: url("../images/Hot.png") no-repeat 100% 100%;
+    background-size: cover;
+    color: #d4eff7;
+}
+.content{
+    padding-top: .4rem;
+
+}
+.con_title{
+    vertical-align: bottom;
+    height: .64rem;
+}
+.title_img {
+    width: .66rem;
+    height: .5rem;
+}
+.title_class{
+    font-size: .38rem;
+    height: .64rem;
+    line-height: .64rem;
+    margin-right: .08rem;
+}
+.title_en{
+    font-size: .25rem;
+    color: #9e9d9d;
+    height: .64rem;
+    line-height: .33rem;
+    padding-top: .21rem;
+    box-sizing: border-box;
+}
+
+.con1_box{
+    margin-bottom: .45rem;
+
+ }
+
+.con1 .title_img{
+    background: url("../images/noun_fashion_1688135.png") no-repeat left top;
+    background-size: contain;
+}
+.box{
+    background: #fff;
+    width: 3.11rem;
+    height: 1.23rem;
+    box-sizing: border-box;
+    box-shadow: 0 0 .15rem  #999;
+    border-radius: .25rem;
+    padding: .2rem 0.1rem 0.2rem;
+    margin-bottom: .24rem;
+}
+.box:nth-child(2n+1){
+    margin-right: .28rem;
+}
+.box_left{
+    width: 1.95rem;
+}
+.box_right{
+    height: .85rem;
+    width: .85rem;
+    border-radius: 50%;
+}
+.box_right img{
+    width: .85rem;
+}
+.box_title{
+    font-size: .29rem;
+    line-height: .5rem;
+}
+.box_title_en{
+    font-size: .19rem;
+    color: #9e9d9d;
+}

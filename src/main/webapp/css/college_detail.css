@@ -1,0 +1,97 @@
+html,body{
+    width: 100%;
+    height: 100%;
+
+}
+.clearfix:after{
+    clear: both;
+    display: block;
+    height: 0;
+    content: "";
+}
+.w{
+    height: 100%;
+    width: 6.8rem;
+    margin: 0 auto;
+    position: relative;
+}
+.banner {
+    height: 4.5rem;
+    background: url("../images/院校图.png") no-repeat 100%;
+    background-size: cover;
+}
+.logo{
+    width: 2.18rem;
+    height: 2.18rem;
+    position: absolute;
+    right: 0;
+    bottom: -1.09rem;
+    background: #000;
+    border-radius: 50%;
+    background: url("../images/logo.png");
+    background-size: cover;
+}
+
+.main_info{
+    padding-top: 1rem;
+    font-size: 0.26rem;
+    line-height: 0.44rem;
+}
+
+.main_info>p:nth-child(1){
+    font-size: 0.48rem;
+    /*line-height: 0.28rem;*/
+
+}
+
+.main_info .pointer{
+    width: 0.16rem;
+    height: 0.18rem;
+    margin-right: 0.06rem;
+    display: inline-block;
+    background: url("../images/pointer.png");
+    background-size: contain;
+}
+
+.box{
+    font-size: 0.28rem;
+    border-radius: 0.16rem;
+    /*height: 0.86rem;*/
+    width: 100%;
+    box-shadow: 0 0.1rem 0.4rem 0 #ccc;
+    margin-bottom: 0.2rem;
+    background: #fff;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0.3rem;
+}
+.left{
+    float: left;
+    margin-right: 0.14rem;
+}
+.right{
+    float: left;
+}
+
+#bigbox{
+    padding-top: 0.4rem;
+
+}
+
+.box_title{
+}
+
+.content_box{
+    line-height: 0.58rem;
+
+}
+
+.extend_box{
+    height: auto;
+}
+
+.title_en{
+    font-size: 0.22rem;
+    color: #9f9f9f;
+}
